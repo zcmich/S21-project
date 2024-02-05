@@ -1,12 +1,13 @@
-import { json, useLoaderData } from "react-router-dom"
-import EventForm from './../components/EventForm';
+import { useLoaderData, json } from "react-router-dom";
+import EventItem from "../components/EventItem";
 
-const EditEventPage = () => {
+const EventDetailPage = (event) => {
     const data = useLoaderData();
-    return <EventForm event={data.event}/>
+    
+    return <EventItem event={data.event} />
 }
 
-export default EditEventPage;
+export default EventDetailPage;
 
 export async function loader  ({request, params})  {
     const id = params.eventId;

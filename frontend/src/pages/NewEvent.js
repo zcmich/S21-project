@@ -1,6 +1,7 @@
+import EventForm from '../components/EventForm';
 
-const NewEventPage = () => {
-  return <h1>New Event</h1>
-};
+function NewEventPage() {
+  return <EventForm method="post" />;
+}
 
 export default NewEventPage;
